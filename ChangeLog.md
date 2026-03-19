@@ -1,5 +1,9 @@
 # Waila for BTW
 
+## 2.0.6
+* Added the function to display detailed growth information of crop blocks.
+---
+
 ## 2.0.5-Fix
 * Fix entity NBT requests to target the inspected entity
 * Use server‑authoritative spider web state for the tooltip
