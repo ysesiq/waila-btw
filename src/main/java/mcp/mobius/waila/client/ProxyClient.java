@@ -38,6 +38,7 @@ public class ProxyClient extends ProxyServer {
         ModuleRegistrar.instance().addConfig("General", "general.showarmor");
         ModuleRegistrar.instance().addConfig("General", "general.showbreed");
         ModuleRegistrar.instance().addConfig("General", "general.showcrop");
+        ModuleRegistrar.instance().addConfig("General", "general.showcropdetails");
 
         ModuleRegistrar.instance().registerTooltipRenderer("waila.health", new TTRenderHealth());
         ModuleRegistrar.instance().registerTooltipRenderer("waila.stack", new TTRenderStack());

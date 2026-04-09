@@ -21,8 +21,7 @@ choice.showliquids=Liquids
 choice.shifttoggledblock=Sneak toggle blocks
 choice.shifttoggledents=Sneak toggle entities
 choice.showicon=Show/Hide Icon
-choice.showitem=Display Item
-choice.tts=Narrate Blocks
+choice.showmods=Display source
 choice.format.modname=Mod Name
 choice.format.blockname=Block Name
 choice.format.fluidname=Fluid Name
@@ -97,6 +96,7 @@ option.general.showatk=Show entities attack
 option.general.showarmor=Show entities armor
 option.general.showbreed=Show animal breeding cooldown
 option.general.showcrop=Show crop growth
+option.general.showcropdetails=Show crop growth details
 
 nei.options.keys.showenchant=Show enchanting values
 
@@ -132,6 +132,25 @@ info.btw.possession.full=Fully Possessed
 info.btw.possession.progressing=Possessing (%d seconds)
 
 hud.msg.attack=Atk: %s
-hud.msg.health=HP:
 hud.msg.armor=Armor：%s
 hud.msg.breed_cooldown=Breeding cooldown: %ds
+
+hud.msg.stage=Stage %d/%d
+hud.msg.crop.growth_rate=Growth chance per random tick (when conditions are met)
+hud.msg.crop.no_light=Insufficient light
+hud.msg.crop.no_water=No hydrated soil
+hud.msg.crop.no_soil=Unsuitable soil
+hud.msg.crop.no_space=No space to grow
+hud.msg.crop.daily_wait=Already grew today
+hud.msg.crop.in_end=Cannot grow in The End
+hud.msg.crop.only_nether=Only grows in the Nether
+hud.msg.crop.weeds=Blocked by weeds
+hud.msg.crop.stopped=Growth stopped
+hud.msg.reed.height=Height
+hud.msg.reed.next_growth=Next growth stage
+hud.msg.reed.max_height=Maximum height reached
+hud.msg.sapling.jungle_needs_2x2=Jungle tree requires 2x2 formation
+hud.msg.sapling.jungle_2x2_wait=2x2 formed, waiting for all to mature
+hud.msg.sapling.jungle_2x2_ready=2x2 ready
+hud.msg.sapling.needs_fertilized_planter=Needs fertilized planter to grow tree
+hud.msg.sapling.on_vase=Cannot grow on vase

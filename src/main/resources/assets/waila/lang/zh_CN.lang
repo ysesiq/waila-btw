@@ -95,6 +95,7 @@ option.general.showatk=显示实体攻击力
 option.general.showarmor=显示实体护甲值
 option.general.showbreed=显示动物繁殖冷却
 option.general.showcrop=显示作物生长状态
+option.general.showcropdetails=显示作物生长细节
 
 nei.options.keys.showenchant=显示附魔值
 
@@ -130,6 +131,25 @@ info.btw.possession.full=已附身
 info.btw.possession.progressing=附身中 (%d秒)
 
 hud.msg.attack=攻击力：%s
-hud.msg.health=生命值：
 hud.msg.armor=护甲值：%s
 hud.msg.breed_cooldown=繁殖冷却：%d秒
+
+hud.msg.stage=第 %d/%d 阶段
+hud.msg.crop.growth_rate=满足条件时每次随机刻生长成功率
+hud.msg.crop.no_light=光照不足
+hud.msg.crop.no_water=缺少湿润土壤
+hud.msg.crop.no_soil=土壤不适合
+hud.msg.crop.no_space=没有生长空间
+hud.msg.crop.daily_wait=今日已生长，需等待
+hud.msg.crop.in_end=末地无法生长
+hud.msg.crop.only_nether=只能在下界生长
+hud.msg.crop.weeds=被杂草阻碍
+hud.msg.crop.stopped=已停止生长
+hud.msg.reed.height=高度
+hud.msg.reed.next_growth=下一生长阶段
+hud.msg.reed.max_height=已达到最大高度
+hud.msg.sapling.jungle_needs_2x2=丛林树苗需要 2x2 摆放
+hud.msg.sapling.jungle_2x2_wait=已形成 2x2，等待全部成熟
+hud.msg.sapling.jungle_2x2_ready=2x2 已就绪
+hud.msg.sapling.needs_fertilized_planter=需要施肥花盆才能长成树
+hud.msg.sapling.on_vase=花瓶上无法生长

@@ -129,14 +129,6 @@ loom {
 	targetCompatibility = JavaVersion.VERSION_17
 }
 
-runClient {
-	dependsOn(jar)
-}
-
-runServer {
-	dependsOn(jar)
-}
-
 tasks.register('copyBtwJar', Copy) {
     def depInter = dependencies.create("maven.modrinth:btwce:${project.btw_version}:intermediary")
     def depDoc = dependencies.create("maven.modrinth:btwce:${project.btw_version}:javadoc")

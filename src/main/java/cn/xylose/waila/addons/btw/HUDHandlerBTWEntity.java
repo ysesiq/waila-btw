@@ -70,8 +70,9 @@ public class HUDHandlerBTWEntity implements IWailaEntityProvider {
             }
         }
 
-        if (entity instanceof EntitySpider spider && config.getConfig("btw.spider_web")) {
-            if (spider.hasWeb()) {
+        if (entity instanceof EntitySpider && config.getConfig("btw.spider_web")) {
+            NBTTagCompound tag = accessor.getNBTData();
+            if (tag != null && tag.hasKey("btw_spider_has_web") && tag.getBoolean("btw_spider_has_web")) {
                 currenttip.add(I18n.getString("info.btw.has_web"));
             }
         }

@@ -143,7 +143,12 @@ public class MetaDataProvider {
 
         if (layout == Layout.BODY) for (List<IWailaDataProvider> providersList : bodyBlockProviders.values()) {
             boolean hasAdvancedBodyAvailable = false;
-            final boolean isAdvancedKeyDown = Keyboard.isKeyDown(KeyEvent.instance.key_show_advanced.keyCode);
+            boolean isAdvancedKeyDown = false;
+            int advancedKeyCode = -1;
+            if (KeyEvent.instance != null && KeyEvent.instance.key_show_advanced != null) {
+                advancedKeyCode = KeyEvent.instance.key_show_advanced.keyCode;
+                isAdvancedKeyDown = Keyboard.isKeyDown(advancedKeyCode);
+            }
 
             for (IWailaDataProvider dataProvider : providersList) try {
                 currenttip = dataProvider.getWailaBody(itemStack, currenttip, accessor, ConfigHandler.instance());
@@ -162,8 +167,10 @@ public class MetaDataProvider {
             }
 
             if (hasAdvancedBodyAvailable && !isAdvancedKeyDown) {
-                String keyName = GameSettings.getKeyDisplayString(KeyEvent.instance.key_show_advanced.keyCode);
-                currenttip.add(LangUtil.translateG("hud.msg.holdkeymoreinfo", keyName));
+                if (advancedKeyCode >= 0) {
+                    String keyName = GameSettings.getKeyDisplayString(advancedKeyCode);
+                    currenttip.add(LangUtil.translateG("hud.msg.holdkeymoreinfo", keyName));
+                }
             }
         }
         if (layout == Layout.FOOTER) for (List<IWailaDataProvider> providersList : tailBlockProviders.values()) {
@@ -187,7 +194,7 @@ public class MetaDataProvider {
                 keys.addAll(ModuleRegistrar.instance().getSyncedNBTKeys(accessor.getEntity()));
 
             if (!keys.isEmpty() || ModuleRegistrar.instance().hasNBTEntityProviders(accessor.getEntity()))
-                PacketDispatcher.sendPacketToServer(Packet0x03EntRequest.create(world, player, keys));
+                PacketDispatcher.sendPacketToServer(Packet0x03EntRequest.create(world, accessor.getEntity(), keys));
 
         } else if (accessor.getEntity() != null && !Waila.instance.serverPresent && accessor.isTimeElapsed(250)) {
 

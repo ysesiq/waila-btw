@@ -54,6 +54,11 @@ public class HUDHandlerEntitiesServer implements IWailaEntityProvider {
             }
         }
 
+        if (entity instanceof EntitySpider spider) {
+            tag.setInteger("btw_spider_web_count", spider.hasWeb() ? 1 : 0);
+            tag.setBoolean("btw_spider_has_web", spider.hasWeb());
+        }
+
         if (entity instanceof EntityCreature creature) {
             tag.setBoolean("Possessible", creature.getCanCreatureTypeBePossessed());
             tag.setBoolean("IsPossessed", creature.isPossessed());
