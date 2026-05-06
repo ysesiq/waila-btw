@@ -117,6 +117,7 @@ info.btw.fuel_time=Fuel Time: %s
 info.btw.burn_time=Burn Time: %s
 info.btw.cook_time=Cook Time: %s
 info.btw.burned_time=Burned Time: %s
+info.btw.dry_time=Dry Time: %s
 
 # entity
 info.btw.has_web=Has Web

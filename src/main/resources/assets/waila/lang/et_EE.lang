@@ -173,6 +173,7 @@ info.btw.fuel_time=Kütuse aeg: %s
 info.btw.burn_time=Põlemisaeg: %s
 info.btw.cook_time=Küpsetusaeg: %s
 info.btw.burned_time=Põlenud aeg: %s
+info.btw.dry_time=Kuivamisaeg: %s
 
 # entity
 info.btw.has_web=On võrk

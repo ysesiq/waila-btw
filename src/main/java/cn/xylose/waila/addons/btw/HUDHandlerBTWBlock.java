@@ -26,6 +26,7 @@ public class HUDHandlerBTWBlock implements IWailaDataProvider {
     static Block mediumCampfire = BTWBlocks.mediumCampfire;
     static Block largeCampfire = BTWBlocks.largeCampfire;
     static Block finiteTorch = BTWBlocks.finiteBurningTorch;
+    static Block placedUnfiredCrudeBrick = BTWBlocks.placedUnfiredCrudeBrick;
 
     private static final HUDHandlerBTWBlock INSTANCE = new HUDHandlerBTWBlock();
 
@@ -44,6 +45,7 @@ public class HUDHandlerBTWBlock implements IWailaDataProvider {
         this.updateOven(currenttip, accessor, config);
         this.updateCampfire(currenttip, accessor, config);
         this.updateFiniteTorch(currenttip, accessor, config);
+        this.updateUnfiredBrick(currenttip, accessor, config);
         return currenttip;
     }
 
@@ -140,6 +142,32 @@ public class HUDHandlerBTWBlock implements IWailaDataProvider {
         return currenttip;
     }
 
+    private List<String> updateUnfiredBrick(List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) {
+        Block block = accessor.getBlock();
+        if (config.getConfig("btw.unfired_brick") && block == placedUnfiredCrudeBrick) {
+            NBTTagCompound tag = accessor.getNBTData();
+            
+            final int TIME_TO_COOK = getUnfiredBrickTimeToCook();
+            int cookCounter = tag.getInteger("fcCookCounter");
+            
+            if (cookCounter > 0 && cookCounter < TIME_TO_COOK) {
+                int remainingDryTime = (TIME_TO_COOK - cookCounter) / 20;
+                currenttip.add(I18n.getStringParams("info.btw.dry_time", remainingDryTime));
+            }
+        }
+        return currenttip;
+    }
+
+    private static int getUnfiredBrickTimeToCook() {
+        try {
+            java.lang.reflect.Field field = btw.block.tileentity.UnfiredBrickTileEntity.class.getDeclaredField("TIME_TO_COOK");
+            field.setAccessible(true);
+            return field.getInt(null);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+    
 //    private List<String> updateEntity(List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) {
 //        Entity block = accessor.en();
 //        if (config.getConfig("btw.finite_torch") && block == finiteTorch) {
@@ -169,14 +197,17 @@ public class HUDHandlerBTWBlock implements IWailaDataProvider {
             ModuleRegistrar.instance().addConfig("BTW", "btw.oven");
             ModuleRegistrar.instance().addConfig("BTW", "btw.campfire");
             ModuleRegistrar.instance().addConfig("BTW", "btw.finite_torch");
+            ModuleRegistrar.instance().addConfig("BTW", "btw.unfired_brick");
 
             ModuleRegistrar.instance().registerBodyProvider(provider, burningLooseOven.getClass());
             ModuleRegistrar.instance().registerBodyProvider(provider, largeCampfire.getClass());
             ModuleRegistrar.instance().registerBodyProvider(provider, finiteTorch.getClass());
+            ModuleRegistrar.instance().registerBodyProvider(provider, placedUnfiredCrudeBrick.getClass());
         }
 
         ModuleRegistrar.instance().registerNBTProvider(provider, burningLooseOven.getClass());
         ModuleRegistrar.instance().registerNBTProvider(provider, largeCampfire.getClass());
         ModuleRegistrar.instance().registerNBTProvider(provider, finiteTorch.getClass());
+        ModuleRegistrar.instance().registerNBTProvider(provider, placedUnfiredCrudeBrick.getClass());
     }
 }

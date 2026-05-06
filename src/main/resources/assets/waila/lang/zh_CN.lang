@@ -116,6 +116,7 @@ info.btw.fuel_time=燃料时间：%s
 info.btw.burn_time=燃烧时间：%s
 info.btw.cook_time=烧制时间：%s
 info.btw.burned_time=烧焦时间：%s
+info.btw.dry_time=干燥时间：%s
 
 # entity
 info.btw.has_web=有网

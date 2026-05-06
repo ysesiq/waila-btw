@@ -173,6 +173,7 @@ info.btw.fuel_time=Время топлива: %s
 info.btw.burn_time=Время горения: %s
 info.btw.cook_time=Время готовки: %s
 info.btw.burned_time=Время перегорело: %s
+info.btw.dry_time=Время сушки: %s
 
 # entity
 info.btw.has_web=Есть паутина
