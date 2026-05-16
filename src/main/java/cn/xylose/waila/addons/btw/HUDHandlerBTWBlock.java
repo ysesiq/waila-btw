@@ -87,12 +87,17 @@ public class HUDHandlerBTWBlock implements IWailaDataProvider {
 
     private List<String> updateCampfire(List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) {
         Block block = accessor.getBlock();
-        if (config.getConfig("btw.campfire") && (block == smallCampfire || block == mediumCampfire || block == largeCampfire)) {
+        if (config.getConfig("btw.campfire") && (block == unlitCampfire || block == smallCampfire || block == mediumCampfire || block == largeCampfire)) {
 
             final int TIME_TO_COOK = getCampfireTimeToCook();
             final int TIME_TO_BURN_FOOD = getCampfireTimeToBurnFood();
 
             NBTTagCompound tag = accessor.getNBTData();
+
+            int emberTime = tag.getInteger("fcSmoulderCounter");
+            if (block == unlitCampfire && emberTime != 0) {
+                currenttip.add(I18n.getStringParams("info.btw.ember_time", emberTime / 20));
+            }
 
             int burnTime = tag.getInteger("fcBurnCounter");
             if (burnTime != 0) {

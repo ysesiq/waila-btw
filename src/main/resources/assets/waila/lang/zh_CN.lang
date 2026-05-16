@@ -114,6 +114,7 @@ option.btw.zombie_conversion_time=显示僵尸村民转化时间
 # block
 info.btw.fuel_time=燃料时间：%s
 info.btw.burn_time=燃烧时间：%s
+info.btw.ember_time=余烬时间：%s
 info.btw.cook_time=烧制时间：%s
 info.btw.burned_time=烧焦时间：%s
 info.btw.dry_time=干燥时间：%s

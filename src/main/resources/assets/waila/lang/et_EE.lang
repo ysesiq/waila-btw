@@ -171,6 +171,7 @@ option.btw.zombie_conversion_time=Näita zombikülaelaniku muutmisaega
 # block
 info.btw.fuel_time=Kütuse aeg: %s
 info.btw.burn_time=Põlemisaeg: %s
+info.btw.ember_time=Hõõgumisaeg: %s
 info.btw.cook_time=Küpsetusaeg: %s
 info.btw.burned_time=Põlenud aeg: %s
 info.btw.dry_time=Kuivamisaeg: %s

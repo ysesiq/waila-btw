@@ -143,6 +143,7 @@ option.btw.zombie_conversion_time=Toon zombie dorpsbewoner conversietijd
 # block
 info.btw.fuel_time=Brandstof tijd: %s
 info.btw.burn_time=Branden tijd: %s
+info.btw.ember_time=Gloeitijd: %s
 info.btw.cook_time=Baktijd: %s
 info.btw.burned_time=Verbrand tijd: %s
 info.btw.dry_time=Droogtijd: %s

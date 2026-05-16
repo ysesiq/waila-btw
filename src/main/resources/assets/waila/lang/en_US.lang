@@ -115,6 +115,7 @@ option.btw.zombie_conversion_time=Show zombie villager conversion time
 # block
 info.btw.fuel_time=Fuel Time: %s
 info.btw.burn_time=Burn Time: %s
+info.btw.ember_time=Ember Time: %s
 info.btw.cook_time=Cook Time: %s
 info.btw.burned_time=Burned Time: %s
 info.btw.dry_time=Dry Time: %s
