@@ -121,7 +121,7 @@ public class ModIdentification {
     }
 
     public static String parseTexture(String str) {
-        String[] parts = str.split(":");
+        String[] parts = str.split(":", 2);
         return getModNameById(parts[0]);
     }
 

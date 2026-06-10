@@ -117,15 +117,15 @@ info.btw.burn_time=燃烧时间：%s
 info.btw.ember_time=余烬时间：%s
 info.btw.cook_time=烧制时间：%s
 info.btw.burned_time=烧焦时间：%s
-info.btw.dry_time=干燥时间：%s
+info.btw.dry_time=风干时间：%s
 
 # entity
 info.btw.has_web=有网
 info.btw.zombie_conversion_time=转化时间: %d秒
 info.btw.chicken_egg_timer=下蛋时间: %d秒
-info.btw.wolf_poop_chance=吃饱了，随时可能拉粑粑(平均20分钟)
-info.btw.growup.normal=成长时间: %d秒 (成长中)
-info.btw.growup.toohungry=成长时间: %d秒 §c(饱食度不足无法成长)§r
+info.btw.wolf_poop_chance=排泄就绪
+info.btw.growup.normal=成长时间: %d秒
+info.btw.growup.toohungry=§c饱食度不足无法成长§r
 info.btw.hunger.famished=饥饿
 info.btw.hunger.starving=消瘦
 info.btw.hunger.state=状态：
@@ -137,7 +137,7 @@ hud.msg.armor=护甲值：%s
 hud.msg.breed_cooldown=繁殖冷却：%d秒
 
 hud.msg.stage=第 %d/%d 阶段
-hud.msg.crop.growth_rate=满足条件时每次随机刻生长成功率
+hud.msg.crop.growth_rate=每刻生长率
 hud.msg.crop.no_light=光照不足
 hud.msg.crop.no_water=缺少湿润土壤
 hud.msg.crop.no_soil=土壤不适合
@@ -153,5 +153,5 @@ hud.msg.reed.max_height=已达到最大高度
 hud.msg.sapling.jungle_needs_2x2=丛林树苗需要 2x2 摆放
 hud.msg.sapling.jungle_2x2_wait=已形成 2x2，等待全部成熟
 hud.msg.sapling.jungle_2x2_ready=2x2 已就绪
-hud.msg.sapling.needs_fertilized_planter=需要施肥花盆才能长成树
+hud.msg.sapling.needs_fertilized_planter=需要施肥花盆
 hud.msg.sapling.on_vase=花瓶上无法生长

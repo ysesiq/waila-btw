@@ -36,8 +36,11 @@ public class HUDHandlerBTWEntity implements IWailaEntityProvider {
 
                 int secondsLeft = -growingAge / 20;
                 if (growingAge < 0) {
-                    String template = tooHungry ? I18n.getString("info.btw.growup.toohungry") : I18n.getString("info.btw.growup.normal");
-                    currenttip.add(String.format(template, secondsLeft));
+                    if (tooHungry) {
+                        currenttip.add(String.format(I18n.getString("info.btw.growup.toohungry"), secondsLeft));
+                    } else {
+                        currenttip.add(String.format(I18n.getString("info.btw.growup.normal"), secondsLeft));
+                    }
                 }
 
                 if (hungerLevel > 0) {

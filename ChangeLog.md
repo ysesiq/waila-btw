@@ -1,5 +1,12 @@
 # Waila for BTW
 
+
+## 2.0.8
+* Optimized some text
+* Added time display for campfire embers
+
+---
+
 ## 2.0.7 by maromalo
 * Added the function to display Wet Crude Brick dry time
 * Fixed an issue where the sky color was incorrect when pointing to sparse loose grass slab
