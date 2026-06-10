@@ -171,8 +171,10 @@ option.btw.zombie_conversion_time=Zombie-Dorfbewohner-Umwandlungszeit anzeigen
 # block
 info.btw.fuel_time=Brennzeit: %s
 info.btw.burn_time=Brennzeit: %s
+info.btw.ember_time=Glutzeit: %s
 info.btw.cook_time=Kochzeit: %s
 info.btw.burned_time=Verbrannte Zeit: %s
+info.btw.dry_time=Trockenzeit: %s
 
 # entity
 info.btw.has_web=Hat Netz

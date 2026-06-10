@@ -162,8 +162,10 @@ option.btw.zombie_conversion_time=Afficher le temps de conversion du zombie vill
 # block
 info.btw.fuel_time=Temps de carburant : %s
 info.btw.burn_time=Temps de combustion : %s
+info.btw.ember_time=Temps de braises : %s
 info.btw.cook_time=Temps de cuisson : %s
 info.btw.burned_time=Temps brûlé : %s
+info.btw.dry_time=Temps de séchage : %s
 
 # entity
 info.btw.has_web=A une toile

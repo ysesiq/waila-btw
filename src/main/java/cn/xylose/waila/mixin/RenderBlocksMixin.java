@@ -1,6 +1,7 @@
 package cn.xylose.waila.mixin;
 
 import btw.block.blocks.LooseSparseGrassBlock;
+import btw.block.blocks.LooseSparseGrassSlabBlock;
 import net.minecraft.src.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -15,7 +16,7 @@ public abstract class RenderBlocksMixin {
 
     @Inject(method = "renderBlockAsItem", at = @At("HEAD"), cancellable = true)
     public void fixGrassRender(Block block, int iItemDamage, float fBrightness, CallbackInfo ci) {
-        if (block instanceof LooseSparseGrassBlock) {
+        if (block instanceof LooseSparseGrassBlock || block instanceof LooseSparseGrassSlabBlock) {
             this.renderBlockAsItemVanilla(block, iItemDamage, fBrightness);
             ci.cancel();
         }

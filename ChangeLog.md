@@ -1,5 +1,10 @@
 # Waila for BTW
 
+## 2.0.7 by maromalo
+* Added the function to display Wet Crude Brick dry time
+* Fixed an issue where the sky color was incorrect when pointing to sparse loose grass slab
+---
+
 ## 2.0.6
 * Added the function to display detailed growth information of crop blocks.
 ---
