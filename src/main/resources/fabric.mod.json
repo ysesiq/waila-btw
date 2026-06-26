@@ -23,8 +23,8 @@
   ],
   "license": "CC-BY-NC-SA 4.0",
   "contact": {
-    "homepage": "https://github.com/ysesiq/Waila-btw",
-    "issues": "https://github.com/ysesiq/Waila/issue-btw"
+    "homepage": "https://github.com/ysesiq/waila-btw",
+    "issues": "https://github.com/ysesiq/waila-btw/issues"
   },
   "entrypoints": {
     "main": [

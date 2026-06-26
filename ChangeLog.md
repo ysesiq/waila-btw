@@ -10,15 +10,19 @@
 ## 2.0.7 by maromalo
 * Added the function to display Wet Crude Brick dry time
 * Fixed an issue where the sky color was incorrect when pointing to sparse loose grass slab
+
 ---
 
 ## 2.0.6
 * Added the function to display detailed growth information of crop blocks.
+
 ---
 
 ## 2.0.5-Fix
 * Fix entity NBT requests to target the inspected entity
 * Use server‑authoritative spider web state for the tooltip
+
+---
 
 ## 2.0.5
 * Completely improve the display of mod names
